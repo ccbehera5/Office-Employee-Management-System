@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>remove</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h1 class="text-center">Remove An Employee</h2>
+    <hr>
+                                            
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle btn-lg" type="button" data-toggle="dropdown">
+      Choose Employee To Be Remove
+    <span class="caret"></span></button>
+
+    <ul class="dropdown-menu">
+      {% for emp in emps %}
+      <li><a href="/remove_emp/{{emp.id}}">{{emp.first_name}}  {{emp.last_name}}</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>
